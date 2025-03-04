@@ -1,10 +1,9 @@
-    
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Gallery</title>
+  <title>Medical Surgeons Gallery</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,6 +11,7 @@
       padding: 0;
       background-color: #f2f2f2;
       text-align: center;
+      padding-top: 80px;
     }
     .wrapper{
     
@@ -213,94 +213,269 @@
         padding:10px 25px;
         font-size:20px;
     }
+
+    /* Navigation Styles */
+    .nav-menu {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-menu h2 {
+      color: white;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00d4ff;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-section h3 {
+      color: #00d4ff;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p {
+      margin: 0.5rem 0;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #00d4ff;
+    }
+
+    /* Search Bar */
+    .search-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 1rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      body {
+        padding-top: 120px;
+      }
+    }
   </style>
 </head>
 <body>
+  <nav class="nav-menu">
+    <h2>Medical Surgeons Gallery</h2>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#specialties">Specialties</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
   <div class="wrapper">
-  <h1>Types of Surgeons</h1>
-  <div class="gallery">
-    <div class="gallery-item">
+    <h1>Types of Surgeons</h1>
     
-      <figure>
-            <a href="https://www.youtube.com/watch?v=_MTKU3d7e8w" target="_blank">
-            <img src="https://physiciansthrive.com/wp-content/uploads/2021/12/neurosurgeon-salary.jpg"height="300px" width="300"title="Brain"></a>
-        <figcaption>Neurosurgeon</figcaption></figure>
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search for a specialty..." id="searchInput">
     </div>
-    <div class="gallery-item">
+
+    <div class="gallery">
+      <div class="gallery-item">
+    
         <figure>
-            <a href="https://www.youtube.com/watch?v=z4G9HgL0zE0">
-            <img src="https://img.freepik.com/premium-photo/modern-medicine-technology-cardiology-mixed-media_641298-17723.jpg"height="300px" width="300" title="Heart"/></a>
-            <figcaption>Cardiologists</figcaption> </figure>
-    </div>
-    <div class="gallery-item">
-        <figure>
-            <a href="https://www.youtube.com/watch?v=zIBvZIo6ZMs">
-            <img src="https://www.drjcsuri.com/wp-content/uploads/2024/03/566.jpg"height="300px" width="300" title="Lungs"/></a>
-            <figcaption>Pulmonologist</figure>
-    </div>
-    <div class="gallery-item">
-        <figure>
-            <a href="https://www.youtube.com/watch?v=rNqxkrPoZSg">
-            <img src="https://www.opaortho.com/wp-content/uploads/2021/12/Doctor-shows-the-spine-conditions.jpg"height="300px" width="300" title="Bones or Muscles"/></a>
-            <figcaption>Orthopedic</figcaption>
-        </figure>
-    </div>
-    <div class="gallery-item">
-        <figure>
-            <a href="https://www.youtube.com/watch?v=CIHc2B06PFc">
-            <img src="https://img.freepik.com/premium-photo/person-holds-glowing-3d-tooth-against-dark-background-concept-advertising-dentist-healthy-teeth_928695-10623.jpg"height="300px" width="300" title="Teeth"/></a>
-            <figcaption>Dentist</figcaption></figure>
-    </div>
-   
-    <div class="gallery-item">
-        <figure>
-            <a href="https://www.youtube.com/watch?v=HUP9nQdpUyM">
-            <img src="https://thumbs.dreamstime.com/b/stomach-issues-medical-concept-photo-female-doctor-empty-space-gastroenterologist-doctor-stomach-specialist-aesthetic-handdrawn-229324816.jpg"height="300px" width="300" title="Digestive System and its Disorders"/></a>
-            <figcaption>Gastroenterologist</figcaption></figure>
+              <a href="https://www.youtube.com/watch?v=_MTKU3d7e8w" target="_blank">
+              <img src="https://physiciansthrive.com/wp-content/uploads/2021/12/neurosurgeon-salary.jpg"height="300px" width="300"title="Brain"></a>
+          <figcaption>Neurosurgeon</figcaption></figure>
       </div>
       <div class="gallery-item">
-        <figure>
-            <a href= "https://www.youtube.com/watch?v=nIxnhi3ugB4">
-            <img src="https://img.freepik.com/free-photo/portrait-beautiful-albino-girl-isolated-dark-studio-neon-light_155003-44040.jpg"height="300px" width="300" title="Eye Specialist"/></a>
-            <figcaption>Opthalmologist</figcaption></figure>
+          <figure>
+              <a href="https://www.youtube.com/watch?v=z4G9HgL0zE0">
+              <img src="https://img.freepik.com/premium-photo/modern-medicine-technology-cardiology-mixed-media_641298-17723.jpg"height="300px" width="300" title="Heart"/></a>
+              <figcaption>Cardiologists</figcaption> </figure>
       </div>
-      
-<div class="gallery-item">
-    <figure>
-        <a href="https://www.youtube.com/watch?v=zhY-iODwlVQ">
-            <img src="https://www.shutterstock.com/image-photo/female-doctor-comforting-depressed-patient-260nw-1672947136.jpg"height="300px" width="300" title="Treat People with Mental Illness"/></a>
-            <figcaption>Psychiatrist</figcaption></figure>
-  </div>
-  
-<div class="gallery-item">
-    <figure>
-        <a href="https://www.youtube.com/watch?v=8ANQ04-HAyU">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxeb8KseqxiCYj3fPUUxQgPMrJ6Q-oEHdAOA&s"height="300px" width="300" title=" Body Hormones"/></a>
-        <figcaption>Endocrinologist </figcaption> </figure>
+      <div class="gallery-item">
+          <figure>
+              <a href="https://www.youtube.com/watch?v=zIBvZIo6ZMs">
+              <img src="https://www.drjcsuri.com/wp-content/uploads/2024/03/566.jpg"height="300px" width="300" title="Lungs"/></a>
+              <figcaption>Pulmonologist</figure>
+      </div>
+      <div class="gallery-item">
+          <figure>
+              <a href="https://www.youtube.com/watch?v=rNqxkrPoZSg">
+              <img src="https://www.opaortho.com/wp-content/uploads/2021/12/Doctor-shows-the-spine-conditions.jpg"height="300px" width="300" title="Bones or Muscles"/></a>
+              <figcaption>Orthopedic</figcaption>
+          </figure>
+      </div>
+      <div class="gallery-item">
+          <figure>
+              <a href="https://www.youtube.com/watch?v=CIHc2B06PFc">
+              <img src="https://img.freepik.com/premium-photo/person-holds-glowing-3d-tooth-against-dark-background-concept-advertising-dentist-healthy-teeth_928695-10623.jpg"height="300px" width="300" title="Teeth"/></a>
+              <figcaption>Dentist</figcaption></figure>
+      </div>
+     
+      <div class="gallery-item">
+          <figure>
+              <a href="https://www.youtube.com/watch?v=HUP9nQdpUyM">
+              <img src="https://thumbs.dreamstime.com/b/stomach-issues-medical-concept-photo-female-doctor-empty-space-gastroenterologist-doctor-stomach-specialist-aesthetic-handdrawn-229324816.jpg"height="300px" width="300" title="Digestive System and its Disorders"/></a>
+              <figcaption>Gastroenterologist</figcaption></figure>
+        </div>
+        <div class="gallery-item">
+          <figure>
+              <a href= "https://www.youtube.com/watch?v=nIxnhi3ugB4">
+              <img src="https://img.freepik.com/free-photo/portrait-beautiful-albino-girl-isolated-dark-studio-neon-light_155003-44040.jpg"height="300px" width="300" title="Eye Specialist"/></a>
+              <figcaption>Opthalmologist</figcaption></figure>
+        </div>
+        
+  <div class="gallery-item">
+      <figure>
+          <a href="https://www.youtube.com/watch?v=zhY-iODwlVQ">
+              <img src="https://www.shutterstock.com/image-photo/female-doctor-comforting-depressed-patient-260nw-1672947136.jpg"height="300px" width="300" title="Treat People with Mental Illness"/></a>
+              <figcaption>Psychiatrist</figcaption></figure>
     </div>
-    <div class="box">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div></div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div></div></div>
     
-    </div>
-</body>
+  <div class="gallery-item">
+      <figure>
+          <a href="https://www.youtube.com/watch?v=8ANQ04-HAyU">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxeb8KseqxiCYj3fPUUxQgPMrJ6Q-oEHdAOA&s"height="300px" width="300" title=" Body Hormones"/></a>
+          <figcaption>Endocrinologist </figcaption> </figure>
+      </div>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div></div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div></div></div>
+      
+      </div>
+  </div>
 
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>We provide comprehensive information about different medical specialties and their practitioners.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: tejaswinikota2505@gmail.com</p>
+        <p>Location: India</p>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="https://github.com/tejaswini275" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/tejaswini275" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      
+      galleryItems.forEach(item => {
+        const specialty = item.querySelector('figcaption').textContent.toLowerCase();
+        if (specialty.includes(searchTerm)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
 </html>
