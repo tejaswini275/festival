@@ -1,0 +1,306 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+    .wrapper{
+    
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    background:linear-gradient(90deg,rgba(2,0,6,1)0%, rgba(9,9,121,1) 35%,rgba(0,212,255,1)100%);
+  }
+
+  .box div{
+    position:absolute;
+    width:60px;
+    height: 60px;
+    background-color: transparent;
+    border:6px solid rgba(255,255,255,1);
+  }
+  .box div:nth-child(1 )
+  {
+    top:12px;
+    left: 42px;
+    animation:animate 10s linear infinite;
+  }
+  .box div:nth-child(2)
+  {
+    top: 70%;
+    left: 50%;
+    animation:animate 7s linear infinite;
+  }
+  .box div:nth-child(3)
+  {
+    top:17%;
+    left: 6%;
+    animation:animate 9s linear infinite;
+  }
+  .box div:nth-child(4)
+  {
+    top:20%;
+    left: 60%;
+    animation:animate 10s linear infinite;
+  }
+  .box div:nth-child(5)
+  {
+    top:67%;
+    left: 10%;
+    animation:animate 6s linear infinite;
+  }
+  .box div:nth-child(6)
+  {
+    top:80%;
+    left: 70%;
+    animation:animate 12s linear infinite;
+  }
+  .box div:nth-child(7)
+  {
+    top:60%;
+    left: 80%;
+    animation:animate 15s linear infinite;
+  }
+  .box div:nth-child(8)
+  {
+    top:32%;
+    left: 25%;
+    animation:animate 16s linear infinite;
+  }
+  .box div:nth-child(9)
+  {
+    top:90%;
+    left: 25%;
+    animation:animate 9s linear infinite;
+  }
+  .box div:nth-child(10)
+  {
+    top:20%;
+    left: 80%;
+    animation:animate 5s linear infinite;
+  }
+  .box div:nth-child(11)
+  {
+    bottom:20%;
+    left: 80%;
+    animation:animate 10s linear infinite;
+  }
+  .box div:nth-child(12)
+  {
+    bottom: 90%;
+    right: 25%;
+    animation:animate 7s linear infinite;
+  }
+  .box div:nth-child(13)
+  {
+    bottom:30%;
+    right: 25%;
+    animation:animate 9s linear infinite;
+  }
+  .box div:nth-child(14)
+  {
+    bottom:20%;
+    right: 60%;
+    animation:animate 10s linear infinite;
+  }
+  .box div:nth-child(15)
+  {
+    bottom:67%;
+    right: 10%;
+    animation:animate 6s linear infinite;
+  }
+  .box div:nth-child(16)
+  {
+    bottom:80%;
+    left: 70%;
+    animation:animate 12s linear infinite;
+  }
+  .box div:nth-child(17)
+  {
+    bottom:60%;
+    right: 80%;
+    animation:animate 15s linear infinite;
+  }
+  .box div:nth-child(18)
+  {
+    bottom:32%;
+    left: 25%;
+    animation:animate 16s linear infinite;
+  }
+  .box div:nth-child(19)
+  {
+    bottom:90%;
+    left: 25%;
+    animation:animate 9s linear infinite;
+  }
+  .box div:nth-child(20)
+  {
+    bottom:20%;
+    right: 80%;
+    animation:animate 5s linear infinite;
+  }
+
+@keyframes animate{
+    0%{
+        transform: scale(0) translate(-90px) rotate(0);
+        opacity:1;
+    }
+    100%
+    {
+        transform: scale(1.3) translate(-90px) rotate(360deg);
+        opacity:0;
+    }
+}
+
+    h1 {
+      margin: 20px ;
+      color:white;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+      background-image:url(https://img.freepik.com/premium-photo/healthcare-medical-touching-medical-icon-digital-healthcare-patient-with-network-connection-modern-hologram-interface-medical-technology_437781-1105.jpg?semt=ais_hybrid); /* Gallery background color */
+         border-radius: 10px;
+      margin: 20px auto;
+      max-width: 1200px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(33.333% - 20px); /* Adjust column layout */
+      box-sizing: border-box;
+      background-color: white; /* Individual item background */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+   
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    
+    figure{
+        border:2px solid black;
+        width:300px;
+        padding: 10px;
+        background-color:lightgrey;
+        box-shadow: 0 0 10px black;
+        display: inline-block;
+        margin:10px;
+    }
+    figure img{
+        width: 100%;
+    }
+    figure figcaption{
+        padding:10px 25px;
+        font-size:20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+  <h1>Types of Surgeons</h1>
+  <div class="gallery">
+    <div class="gallery-item">
+    
+      <figure>
+            <a href="https://www.youtube.com/watch?v=_MTKU3d7e8w" target="_blank">
+            <img src="https://physiciansthrive.com/wp-content/uploads/2021/12/neurosurgeon-salary.jpg"height="300px" width="300"title="Brain"></a>
+        <figcaption>Neurosurgeon</figcaption></figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <a href="https://www.youtube.com/watch?v=z4G9HgL0zE0">
+            <img src="https://img.freepik.com/premium-photo/modern-medicine-technology-cardiology-mixed-media_641298-17723.jpg"height="300px" width="300" title="Heart"/></a>
+            <figcaption>Cardiologists</figcaption> </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <a href="https://www.youtube.com/watch?v=zIBvZIo6ZMs">
+            <img src="https://www.drjcsuri.com/wp-content/uploads/2024/03/566.jpg"height="300px" width="300" title="Lungs"/></a>
+            <figcaption>Pulmonologist</figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <a href="https://www.youtube.com/watch?v=rNqxkrPoZSg">
+            <img src="https://www.opaortho.com/wp-content/uploads/2021/12/Doctor-shows-the-spine-conditions.jpg"height="300px" width="300" title="Bones or Muscles"/></a>
+            <figcaption>Orthopedic</figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <a href="https://www.youtube.com/watch?v=CIHc2B06PFc">
+            <img src="https://img.freepik.com/premium-photo/person-holds-glowing-3d-tooth-against-dark-background-concept-advertising-dentist-healthy-teeth_928695-10623.jpg"height="300px" width="300" title="Teeth"/></a>
+            <figcaption>Dentist</figcaption></figure>
+    </div>
+   
+    <div class="gallery-item">
+        <figure>
+            <a href="https://www.youtube.com/watch?v=HUP9nQdpUyM">
+            <img src="https://thumbs.dreamstime.com/b/stomach-issues-medical-concept-photo-female-doctor-empty-space-gastroenterologist-doctor-stomach-specialist-aesthetic-handdrawn-229324816.jpg"height="300px" width="300" title="Digestive System and its Disorders"/></a>
+            <figcaption>Gastroenterologist</figcaption></figure>
+      </div>
+      <div class="gallery-item">
+        <figure>
+            <a href= "https://www.youtube.com/watch?v=nIxnhi3ugB4">
+            <img src="https://img.freepik.com/free-photo/portrait-beautiful-albino-girl-isolated-dark-studio-neon-light_155003-44040.jpg"height="300px" width="300" title="Eye Specialist"/></a>
+            <figcaption>Opthalmologist</figcaption></figure>
+      </div>
+      
+<div class="gallery-item">
+    <figure>
+        <a href="https://www.youtube.com/watch?v=zhY-iODwlVQ">
+            <img src="https://www.shutterstock.com/image-photo/female-doctor-comforting-depressed-patient-260nw-1672947136.jpg"height="300px" width="300" title="Treat People with Mental Illness"/></a>
+            <figcaption>Psychiatrist</figcaption></figure>
+  </div>
+  
+<div class="gallery-item">
+    <figure>
+        <a href="https://www.youtube.com/watch?v=8ANQ04-HAyU">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxeb8KseqxiCYj3fPUUxQgPMrJ6Q-oEHdAOA&s"height="300px" width="300" title=" Body Hormones"/></a>
+        <figcaption>Endocrinologist </figcaption> </figure>
+    </div>
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div></div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div></div></div>
+    
+    </div>
+</body>
+
+</html>
