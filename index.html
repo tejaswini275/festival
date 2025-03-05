@@ -1,481 +1,312 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medical Surgeons Gallery</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
-      text-align: center;
-      padding-top: 80px;
-    }
-    .wrapper{
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Shopping</title>
     
-    width:100%;
-    height:100%;
-    overflow: hidden;
-    background:linear-gradient(90deg,rgba(2,0,6,1)0%, rgba(9,9,121,1) 35%,rgba(0,212,255,1)100%);
-  }
-
-  .box div{
-    position:absolute;
-    width:60px;
-    height: 60px;
-    background-color: transparent;
-    border:6px solid rgba(255,255,255,1);
-  }
-  .box div:nth-child(1 )
-  {
-    top:12px;
-    left: 42px;
-    animation:animate 10s linear infinite;
-  }
-  .box div:nth-child(2)
-  {
-    top: 70%;
-    left: 50%;
-    animation:animate 7s linear infinite;
-  }
-  .box div:nth-child(3)
-  {
-    top:17%;
-    left: 6%;
-    animation:animate 9s linear infinite;
-  }
-  .box div:nth-child(4)
-  {
-    top:20%;
-    left: 60%;
-    animation:animate 10s linear infinite;
-  }
-  .box div:nth-child(5)
-  {
-    top:67%;
-    left: 10%;
-    animation:animate 6s linear infinite;
-  }
-  .box div:nth-child(6)
-  {
-    top:80%;
-    left: 70%;
-    animation:animate 12s linear infinite;
-  }
-  .box div:nth-child(7)
-  {
-    top:60%;
-    left: 80%;
-    animation:animate 15s linear infinite;
-  }
-  .box div:nth-child(8)
-  {
-    top:32%;
-    left: 25%;
-    animation:animate 16s linear infinite;
-  }
-  .box div:nth-child(9)
-  {
-    top:90%;
-    left: 25%;
-    animation:animate 9s linear infinite;
-  }
-  .box div:nth-child(10)
-  {
-    top:20%;
-    left: 80%;
-    animation:animate 5s linear infinite;
-  }
-  .box div:nth-child(11)
-  {
-    bottom:20%;
-    left: 80%;
-    animation:animate 10s linear infinite;
-  }
-  .box div:nth-child(12)
-  {
-    bottom: 90%;
-    right: 25%;
-    animation:animate 7s linear infinite;
-  }
-  .box div:nth-child(13)
-  {
-    bottom:30%;
-    right: 25%;
-    animation:animate 9s linear infinite;
-  }
-  .box div:nth-child(14)
-  {
-    bottom:20%;
-    right: 60%;
-    animation:animate 10s linear infinite;
-  }
-  .box div:nth-child(15)
-  {
-    bottom:67%;
-    right: 10%;
-    animation:animate 6s linear infinite;
-  }
-  .box div:nth-child(16)
-  {
-    bottom:80%;
-    left: 70%;
-    animation:animate 12s linear infinite;
-  }
-  .box div:nth-child(17)
-  {
-    bottom:60%;
-    right: 80%;
-    animation:animate 15s linear infinite;
-  }
-  .box div:nth-child(18)
-  {
-    bottom:32%;
-    left: 25%;
-    animation:animate 16s linear infinite;
-  }
-  .box div:nth-child(19)
-  {
-    bottom:90%;
-    left: 25%;
-    animation:animate 9s linear infinite;
-  }
-  .box div:nth-child(20)
-  {
-    bottom:20%;
-    right: 80%;
-    animation:animate 5s linear infinite;
-  }
-
-@keyframes animate{
-    0%{
-        transform: scale(0) translate(-90px) rotate(0);
-        opacity:1;
-    }
-    100%
-    {
-        transform: scale(1.3) translate(-90px) rotate(360deg);
-        opacity:0;
-    }
+    <style>
+       
+       body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, rgba(2, 0, 6, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    color: white;
+}
+h1 {
+    text-align: center;  /* Center the heading horizontally */
+    font-size: 3em;      /* Make the heading larger */
+    margin-bottom: 20px; /* Optional space below the heading */
+}
+.container {
+    text-align: center;
+    padding:50px;
 }
 
-    h1 {
-      margin: 20px ;
-      color:white;
-    }
+.festival-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin: 50px;
+}
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      padding: 20px;
-      background-image:url(https://img.freepik.com/premium-photo/healthcare-medical-touching-medical-icon-digital-healthcare-patient-with-network-connection-modern-hologram-interface-medical-technology_437781-1105.jpg?semt=ais_hybrid); /* Gallery background color */
-         border-radius: 10px;
-      margin: 20px auto;
-      max-width: 1200px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .gallery-item {
-      flex: 1 1 calc(33.333% - 20px); /* Adjust column layout */
-      box-sizing: border-box;
-      background-color: white; /* Individual item background */
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-   
-
-    .gallery-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    }
-
+        .hide { 
+            display: none;
+        }
+        .product, .cart-item {
+            border: 1px solid #ddd;
+            padding: 10px; 
+            margin: 10px; 
+            display: inline-block; 
+            width: 200px;
+        }
+        .btn { 
+            padding: 10px; 
+            margin: 5px; 
+            cursor: pointer;
+            border: none; 
+            border-radius: 5px; 
+        }
+        .festival-btn { 
+            background-color:transparent;
+            color: white; 
+            width: 300px;  /* Increased width for button */
+            padding: 10px; /* Added some padding to make the button taller */
+            text-align: center;
+            display: inline-block;
+        }
+        .cart-btn { background-color: green; color: white; }
+        .remove-btn { background-color: red; color: white; }
+        .checkout-btn { background-color: blue; color: white; }
+        .cart { position: fixed; top: 10px; right: 10px; background: red; color: white; padding: 10px; border-radius: 50%; cursor: pointer; }
+        .thank-you { 
+            font-size: 24px; color: green; margin-top: 20px;
+        }
     
-    figure{
-        border:2px solid black;
-        width:300px;
-        padding: 10px;
-        background-color:lightgrey;
-        box-shadow: 0 0 10px black;
-        display: inline-block;
-        margin:10px;
-    }
-    figure img{
-        width: 100%;
-    }
-    figure figcaption{
-        padding:10px 25px;
-        font-size:20px;
-    }
-
-    /* Navigation Styles */
-    .nav-menu {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      padding: 1rem;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-menu h2 {
-      color: white;
-      margin: 0;
-      font-size: 1.5rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #00d4ff;
-    }
-
-    /* Footer Styles */
-    .footer {
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .footer-section h3 {
-      color: #00d4ff;
-      margin-bottom: 1rem;
-    }
-
-    .footer-section p {
-      margin: 0.5rem 0;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .social-links a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: #00d4ff;
-    }
-
-    /* Search Bar */
-    .search-container {
-      max-width: 600px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    .search-input {
-      width: 100%;
-      padding: 1rem;
-      border: none;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      font-size: 1rem;
-      backdrop-filter: blur(10px);
-    }
-
-    .search-input::placeholder {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .nav-menu {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      body {
-        padding-top: 120px;
-      }
-    }
-  </style>
+        /* Adjust grid layout for festival buttons */
+        
+        /* Adjust image size */
+        .festival-btn img { 
+            width: 100%;  /* Set image width to 100% of its parent container */
+            height: 200px;  /* Increased image height */
+            object-fit: cover; 
+            margin-bottom: 5px; /* Space between image and caption */
+        }
+    
+        /* Increase caption font size */
+        .festival-btn figcaption { 
+            margin-top: 5px; 
+            font-size: 18px;  /* Increased font size of the caption */
+            font-weight: bold;
+        }
+    </style>
+        
 </head>
 <body>
-  <nav class="nav-menu">
-    <h2>Medical Surgeons Gallery</h2>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#specialties">Specialties</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
 
-  <div class="wrapper">
-    <h1>Types of Surgeons</h1>
-    
-    <div class="search-container">
-      <input type="text" class="search-input" placeholder="Search for a specialty..." id="searchInput">
+    <!-- Home Page -->
+    <div id="home">
+        <h1>Welcome to Festival Shopping</h1>
+        <div class="container festival-grid">
+            <button class="btn festival-btn" onclick="selectFestival('Diwali')">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/475/549/small_2x/colorful-firework-background-free-vector.jpg" alt="Diwali">
+                <figcaption>Diwali</figcaption>
+            </button>
+            <button class="btn festival-btn" onclick="selectFestival('Christmas')">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/053/723/513/small_2x/merry-christmas-greeting-card-on-sightly-red-background-new-year-greeting-photo.jpg" alt="Christmas">
+                <figcaption> Christmas</figcaption>
+            </button>
+            <button class="btn festival-btn" onclick="selectFestival('Halloween')">
+                <img src="https://cdn.britannica.com/73/132673-050-AD33F71E/Children-Halloween-costumes.jpg" alt="Halloween">
+                <figcaption> Halloween</figcaption>
+            </button>
+            <button class="btn festival-btn" onclick="selectFestival('Holi')">
+                <img src="https://hinduismtoday.b-cdn.net/wp-content/uploads/2010/04/holi111-1024x684.jpg" alt="Holi">
+                <figcaption>Holi</figcaption>
+            </button>
+            <button class="btn festival-btn" onclick="selectFestival('Dusshra')">
+                <img src="https://cdn.britannica.com/12/262512-050-F4A08A21/An-effigy-of-Ravana-the-10-headed-king-of-the-demons-rakshasas-goes-up-in-flames-marking-the-end-of-Dussehra-festival-at-Ghatkopar-on-October-24-2023-in-Mumbai-India-Hinduism-Hindu-mythology.jpg" alt="Dusshra">
+                <figcaption>Dusshra</figcaption>
+            </button>
+            <button class="btn festival-btn" onclick="selectFestival('New Year')">
+                <img src="https://paytmblogcdn.paytm.com/wp-content/uploads/2024/12/new-year.jpg" alt="New Year">
+                <figcaption> New Year</figcaption>
+            </button>
+        </div>
     </div>
 
-    <div class="gallery">
-      <div class="gallery-item">
-    
-        <figure>
-              <a href="https://www.youtube.com/watch?v=_MTKU3d7e8w" target="_blank">
-              <img src="https://physiciansthrive.com/wp-content/uploads/2021/12/neurosurgeon-salary.jpg"height="300px" width="300"title="Brain"></a>
-          <figcaption>Neurosurgeon</figcaption></figure>
-      </div>
-      <div class="gallery-item">
-          <figure>
-              <a href="https://www.youtube.com/watch?v=z4G9HgL0zE0">
-              <img src="https://img.freepik.com/premium-photo/modern-medicine-technology-cardiology-mixed-media_641298-17723.jpg"height="300px" width="300" title="Heart"/></a>
-              <figcaption>Cardiologists</figcaption> </figure>
-      </div>
-      <div class="gallery-item">
-          <figure>
-              <a href="https://www.youtube.com/watch?v=zIBvZIo6ZMs">
-              <img src="https://www.drjcsuri.com/wp-content/uploads/2024/03/566.jpg"height="300px" width="300" title="Lungs"/></a>
-              <figcaption>Pulmonologist</figure>
-      </div>
-      <div class="gallery-item">
-          <figure>
-              <a href="https://www.youtube.com/watch?v=rNqxkrPoZSg">
-              <img src="https://www.opaortho.com/wp-content/uploads/2021/12/Doctor-shows-the-spine-conditions.jpg"height="300px" width="300" title="Bones or Muscles"/></a>
-              <figcaption>Orthopedic</figcaption>
-          </figure>
-      </div>
-      <div class="gallery-item">
-          <figure>
-              <a href="https://www.youtube.com/watch?v=CIHc2B06PFc">
-              <img src="https://img.freepik.com/premium-photo/person-holds-glowing-3d-tooth-against-dark-background-concept-advertising-dentist-healthy-teeth_928695-10623.jpg"height="300px" width="300" title="Teeth"/></a>
-              <figcaption>Dentist</figcaption></figure>
-      </div>
-     
-      <div class="gallery-item">
-          <figure>
-              <a href="https://www.youtube.com/watch?v=HUP9nQdpUyM">
-              <img src="https://thumbs.dreamstime.com/b/stomach-issues-medical-concept-photo-female-doctor-empty-space-gastroenterologist-doctor-stomach-specialist-aesthetic-handdrawn-229324816.jpg"height="300px" width="300" title="Digestive System and its Disorders"/></a>
-              <figcaption>Gastroenterologist</figcaption></figure>
-        </div>
-        <div class="gallery-item">
-          <figure>
-              <a href= "https://www.youtube.com/watch?v=nIxnhi3ugB4">
-              <img src="https://img.freepik.com/free-photo/portrait-beautiful-albino-girl-isolated-dark-studio-neon-light_155003-44040.jpg"height="300px" width="300" title="Eye Specialist"/></a>
-              <figcaption>Opthalmologist</figcaption></figure>
-        </div>
+    <!-- Products Page -->
+    <div id="products-page" class="hide">
+        <h1 id="festival-title"></h1>
+        <div id="product-list" class="container"></div>
+        <button class="btn" onclick="showHome()">⬅ Back</button>
+        <div class="cart" onclick="showCart()">🛒 <span id="cart-count">0</span></div>
+    </div>
+
+    <!-- Cart Page -->
+    <div id="cart-page" class="hide">
+        <h1>Your Cart</h1>
+        <div id="cart-items" class="container"></div>
+        <h2>Total: $<span id="total-price">0</span></h2>
         
-  <div class="gallery-item">
-      <figure>
-          <a href="https://www.youtube.com/watch?v=zhY-iODwlVQ">
-              <img src="https://www.shutterstock.com/image-photo/female-doctor-comforting-depressed-patient-260nw-1672947136.jpg"height="300px" width="300" title="Treat People with Mental Illness"/></a>
-              <figcaption>Psychiatrist</figcaption></figure>
-    </div>
-    
-  <div class="gallery-item">
-      <figure>
-          <a href="https://www.youtube.com/watch?v=8ANQ04-HAyU">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxeb8KseqxiCYj3fPUUxQgPMrJ6Q-oEHdAOA&s"height="300px" width="300" title=" Body Hormones"/></a>
-          <figcaption>Endocrinologist </figcaption> </figure>
-      </div>
-      <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div></div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div></div></div>
-      
-      </div>
-  </div>
+        <!-- Coupon Section -->
+        <input type="text" id="coupon" placeholder="Enter Coupon Code" style="padding: 5px;">
+        <button class="btn" onclick="applyCoupon()">Apply</button>
+        <p id="discount-msg"></p>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>About Us</h3>
-        <p>We provide comprehensive information about different medical specialties and their practitioners.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Contact</h3>
-        <p>Email: tejaswinikota2505@gmail.com</p>
-        <p>Location: India</p>
-      </div>
-      <div class="footer-section">
-        <h3>Connect With Us</h3>
-        <div class="social-links">
-          <a href="https://github.com/tejaswini275" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/in/tejaswini275" target="_blank">LinkedIn</a>
+        <button class="btn checkout-btn" onclick="showAddressForm()">Proceed to Checkout</button>
+        <button class="btn" onclick="showProducts()">⬅ Back</button>
+
+        <!-- Address Input -->
+        <div id="address-form" class="hide">
+            <h3>Enter Address</h3>
+            <input type="text" id="address" placeholder="Enter your address" style="width: 200px; padding: 5px;">
+            <button class="btn checkout-btn" onclick="placeOrder()">Place Order</button>
         </div>
-      </div>
     </div>
-  </footer>
 
-  <script>
-    // Search functionality
-    const searchInput = document.getElementById('searchInput');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    <!-- Thank You Page -->
+    <div id="thank-you-page" class="hide">
+        <h1>Thank You for Your Purchase!</h1>
+        <p>Your order has been placed successfully. We will deliver your items soon.</p>
+        <button class="btn" onclick="showHome()">Go to Home</button>
+    </div>
 
-    searchInput.addEventListener('input', (e) => {
-      const searchTerm = e.target.value.toLowerCase();
-      
-      galleryItems.forEach(item => {
-        const specialty = item.querySelector('figcaption').textContent.toLowerCase();
-        if (specialty.includes(searchTerm)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
+    <script>
+        let products = {
+            "Diwali": [
+                { name: "Diyas", price: 5, img: "https://www.hindustantimes.com/ht-img/img/2023/11/09/550x309/umesh-soni-H4ilfu3vftk-unsplash_1699521670352_1699521705408.jpg" },
+                { name: "Sweets Box", price: 20, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnhR3XmFayokYt7rq8X1Bw7oGlQvJ5q3jRzQ&s" },
+                { name: "Lantern", price: 15, img: "https://tekled.co.uk/cdn/shop/articles/what-lantern-is-509240.jpg?v=1685397136" }
+            ],
+            "Christmas": [
+                { name: "Christmas Tree", price: 50, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSThsjf_KrDK85tum2DxCMU2dku7aFWFAHMVQ&s" },
+                { name: "Gift Box", price: 30, img: "https://www.bigbasket.com/media/uploads/p/l/40321116_2-urbanfest-urbanfest-hanging-decorative-big-gift-box-for-christmas-tree-colour-assorted-pack-of-6.jpg" },
+                { name: "Fairy Lights", price: 10, img: "https://ledmarket.in/wp-content/uploads/2023/11/225068713_max-e1698954018928.jpg" }
+            ],
+            "Halloween": [
+                { name: "Pumpkin", price: 15, img: "https://media.gettyimages.com/id/1184857940/photo/halloween-pumpkins.jpg?s=612x612&w=gi&k=20&c=7ngpU3CuTv6a1rLkKkpT3zASzc5wAWNJ_lGwSV5gyoI=" },
+                { name: "Ghost Decoration", price: 10, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJM1cxd0SmfzTWym7euFtZ4MiwRgImpb5lQ&s" },
+                { name: "Candy Bag", price: 5, img: "https://media6.ppl-media.com//tr:h-235,w-235,c-at_max,dpr-2/static/img/product/269180/sq-hand-bag_4_display_1643716148_972058f7.jpg" }
+            ],
+            "Dusshra": [
+                { name: "fruits", price: 15, img: "https://www.flowers2jabalpur.com/productimages/DFCSUUN345-BAS_big.jpg" },
+                { name: "flowers", price: 10, img: "https://www.themaevastore.com/cdn/shop/articles/WhatsApp_Image_2024-09-18_at_17.12.42_c2fd79e6.jpg?v=1726662553" },
+                { name: "durga devi idol", price: 5, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh3_oOmqmWUqUdi_8sFJOf3KXt-n9FEAphZh-U-pDyL0MNUVwkDBn35Pz5MbsZrxQdLVg&usqp=CAU" }
+            ],
+            "Holi": [
+                { name: "Colours", price: 15, img: "https://5.imimg.com/data5/SELLER/Default/2023/6/315291340/PC/NP/HD/5127974/oil-soluble-dyes.jpg" },
+                { name: "water guns", price: 10, img: "https://www.shutterstock.com/image-photo/bangkok-thailand-march-17-2019-260nw-1353198593.jpg" },
+                { name: "drums", price: 5, img: "https://thumbs.dreamstime.com/b/vibrant-celebration-indian-holi-festival-musician-playing-drums-depicting-joy-culture-tradition-vibrant-celebration-354112126.jpg" }
+            ],
+            "New Year": [
+                { name: "Party Hat", price: 5, img: "https://m.media-amazon.com/images/I/618SqYURiVL._AC_UY350_.jpg" },
+                { name: "Confetti Pack", price: 8, img: "https://m.media-amazon.com/images/I/81Q8ghvnooL._AC_UF1000,1000_QL80_.jpg" },
+                { name: "2025 Glasses", price: 3, img: "https://m.media-amazon.com/images/I/61t4nwpv+-L._AC_UY350_.jpg" }
+            ]
+        };
+
+        let cart = [];
+        let selectedFestival = "";
+
+        function selectFestival(festival) {
+            selectedFestival = festival;
+            document.getElementById("festival-title").innerText = `${festival} Specials`;
+            showProducts();
+            let productList = document.getElementById("product-list");
+            productList.innerHTML = "";
+            products[festival].forEach(product => {
+                productList.innerHTML += `
+                    <div class="product">
+                        <img src="${product.img}" alt="${product.name}" style="width: 100%; height: 150px; object-fit: cover;">
+                        <h3>${product.name}</h3>
+                        <p>Price: $${product.price}</p>
+                        <button class="btn cart-btn" onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+                    </div>
+                `;
+            });
         }
-      });
-    });
-  </script>
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            document.getElementById("cart-count").innerText = cart.length;
+        }
+
+        function showCart() {
+            document.getElementById("home").classList.add("hide");
+            document.getElementById("products-page").classList.add("hide");
+            document.getElementById("cart-page").classList.remove("hide");
+            renderCart();
+        }
+
+        function renderCart() {
+            let cartItemsDiv = document.getElementById("cart-items");
+            let totalPrice = 0;
+            cartItemsDiv.innerHTML = "";
+            cart.forEach((item, index) => {
+                totalPrice += item.price;
+                cartItemsDiv.innerHTML += `
+                    <div class="cart-item">
+                        <h3>${item.name}</h3>
+                        <p>Price: $${item.price}</p>
+                        <button class="btn remove-btn" onclick="removeFromCart(${index})">Remove</button>
+                    </div>
+                `;
+            });
+            document.getElementById("total-price").innerText = totalPrice;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            renderCart();
+            updateCart();
+        }
+
+        function applyCoupon() {
+            let couponCode = document.getElementById("coupon").value;
+            let discountMsg = document.getElementById("discount-msg");
+            let total = cart.reduce((sum, item) => sum + item.price, 0);
+
+            if (couponCode === "DIWALI10" && selectedFestival === "Diwali") {
+                total *= 0.9;
+                discountMsg.innerText = "10% Diwali Discount Applied!";
+            } else if (couponCode === "XMAS15" && selectedFestival === "Christmas") {
+                total *= 0.85;
+                discountMsg.innerText = "15% Christmas Discount Applied!";
+            } else {
+                discountMsg.innerText = "❌ Invalid Coupon!";
+            }
+
+            document.getElementById("total-price").innerText = total.toFixed(2);
+        }
+
+        function showAddressForm() {
+            document.getElementById("address-form").classList.remove("hide");
+        }
+
+        function placeOrder() {
+            let address = document.getElementById("address").value;
+            if (!address.trim()) {
+                alert("Please enter your address.");
+                return;
+            }
+            alert("🎉 Order placed successfully!");
+            cart = [];
+            updateCart();
+            showThankYou();
+        }
+
+        function showThankYou() {
+            document.getElementById("cart-page").classList.add("hide");
+            document.getElementById("thank-you-page").classList.remove("hide");
+        }
+
+        function showHome() {
+            document.getElementById("home").classList.remove("hide");
+            document.getElementById("products-page").classList.add("hide");
+            document.getElementById("cart-page").classList.add("hide");
+            document.getElementById("thank-you-page").classList.add("hide");
+        }
+
+        function showProducts() {
+            document.getElementById("home").classList.add("hide");
+            document.getElementById("products-page").classList.remove("hide");
+            document.getElementById("cart-page").classList.add("hide");
+        }
+    </script>
+    
 </body>
 </html>
+
